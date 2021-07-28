@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="chairty"/>
+  <table-filter match-name="tbl_post"/>
+  <table-filter match-name="tbl_luar"/>
+  <table-filter match-name="tbl_admin"/>
+  <table-filter match-name="image_table"/>
+  <table-filter match-name="tbl_transaction"/>
+</hibernate-reverse-engineering>

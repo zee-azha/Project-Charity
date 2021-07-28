@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Donate</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="base_template.xhtml">
+            <ui:define name="topbody">
+                <h1 class="probootstrap-heading probootstrap-animate">DONATE<span>Together we can make a difference</span></h1>
+            </ui:define>
+            
+            <ui:define name="body">
+                <section class="probootstrap-section">
+                <div class="container">
+          <div class="row">
+                <div class="col-md-5 probootstrap-animate">
+                    <h:form id ="formid" styleClass="form-signin" prependId="false">
+                       
+                       
+                            
+                        <div class="form-group">
+                            <div class="name">Full name</div>
+                               <h:outputText class="form-control form-control-user" value="#{tblPost.user}"/>
+                            </div>
+                     <div class="form-group">
+                            <div class="name">Title</div>
+                            <h:outputText class="form-control form-control-user" value="#{tblPost.judul}"/>
+                            </div>
+                        <div class="form-group">
+                            <div class="name">Description</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <h:outputText class="form-control form-control-user" value="#{tblPost.deskirpsi}"/></div>
+                                   
+                            </div>
+                        </div>
+                       </h:form> 
+                </div>
+                
+                
+        
+          <div class="col-md-5 probootstrap-animate">
+              
+            <h:form class="probootstrap-form">
+                 <div class="form-group">
+                            <div class="name">Id</div>
+                            <h:inputText class="form-control form-control-user" value="#{tblPost.id}"/> 
+                            </div> 
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <b:inputText type="text" class="form-control" id="name" name="name" value="#{tblTransaction.name}"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                 <b:inputText type="text" class="form-control" id="email" name="email" value="#{tblTransaction.email}"/>
+              </div>
+              <div class="form-group">
+                  
+                <label for="subject">Amount</label>
+                <b:inputText type="number" class="form-control" id="amount" name="amount" value="#{tblTransaction.amount}"/>
+              </div>
+              
+               <center>
+                   <b:commandButton look="primary btnsuccess" value="SIMPAN" icon="save" action="#{tblTransaction.save(tblPost.id)}"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<b:commandButton look="primary btnsuccess" value="RESET" icon="refresh" action="#"/> &nbsp;&nbsp;&nbsp;
+<br/> <strong><h:outputText value="#{tblTransaction.info}"/></strong> <br/>
+                    </center>
+            </h:form>
+          </div>
+        </div>
+        </div>
+      </section>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

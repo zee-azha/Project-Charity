@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2019 3:34:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.TblLuar" table="tbl_luar" catalog="chairty" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="postId" type="string">
+            <column name="postId" length="15" not-null="true" />
+        </property>
+        <property name="keluar" type="int">
+            <column name="keluar" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

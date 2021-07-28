@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Admin Charity</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"/>
+        <link href="cssInput/css/main.css" rel="alternate stylesheet" media="all"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="base_template.xhtml">
+            <ui:define name="body">
+        <h1 class="h3 mb-4 text-gray-800">Modification</h1>
+                            <h:form id ="formid" styleClass="form-signin" prependId="false">
+                                    <div class="form-group">
+                            <div class="name">ID</div>
+                                <b:inputText class="form-control form-control-user" type="text" name="ID" value="#{tblPost.id}"/>
+                            </div>
+                        <div class="form-group">
+                            <div class="name">Full name</div>
+                                <b:inputText class="form-control form-control-user" type="text" name="full_name" value="#{tblPost.user}"/>
+                            </div>
+                     <div class="form-group">
+                            <div class="name">Title</div>
+                                <b:inputText class="form-control form-control-user" type="text" name="title" value="#{tblPost.judul}"/>
+                            </div>
+                        <div class="form-group">
+                            <div class="name">Description</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <b:inputTextarea class="form-control form-control-user" value="#{tblPost.deskirpsi}"/>                                </div>
+                            </div>
+                        </div>
+                        
+                      
+                <center>
+                <b:commandButton look="primary btnsuccess" value="UBAH" icon="edit" action="#{tblPost.update}"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <b:commandButton look="primary btnsuccess" value="HAPUS" icon="trash" action="#{tblPost.delete}"/> &nbsp;&nbsp;&nbsp; 
+                </center>
+                    </h:form>
+                  
+            </ui:define>
+        </ui:composition>
+         <script src="cssInput/js/global.js"></script>
+    </h:body>
+</html>
+

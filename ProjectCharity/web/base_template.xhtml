@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Charity</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,700,900" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles-merged.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+    </h:head>
+    <h:body> <h:form>
+        
+            <nav class="navbar navbar-default probootstrap-navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><h:commandLink value="Home"  action="index?faces-redirect=true"/> </li>
+              <li><h:commandLink value="About"  action="about?faces-redirect=true"/> </li>
+              <li><h:commandLink value="Causes"  action="causes?faces-redirect=true"/> </li>
+              <li><h:commandLink value="Gallery"  action="gallery?faces-redirect=true"/> </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        </h:form>
+        <section class="probootstrap-hero" style= "background-image: url(img/header1.jpg)"  data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="probootstrap-slider-text probootstrap-animate" data-animate-effect="fadeIn">
+                  <ui:insert name="topbody"></ui:insert>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <ui:insert name="body"></ui:insert>
+        
+        
+        
+        <footer class="probootstrap-footer probootstrap-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 probootstrap-animate">
+              <div class="probootstrap-footer-widget">
+                <h3>About Us</h3>
+                <p>When Charity starting working in the vast archipelago in 1948, the organisation focused on providing emergency assistance to avert a famine on the island of Lombok.
+
+A year later, the first official cooperation agreement was signed with the Republic of Indonesia to build a milk kitchen in Yogyakarta, the seat of the new government at that time.
+
+In 1969, the Government of Indonesia launched its first Five Year Development Plan, with CHARITY and other UN organizations providing technical assistance.</p>
+                <ul class="probootstrap-footer-social">
+                  <li><a href="#"><i class="icon-twitter"></i></a></li>
+                  <li><a href="#"><i class="icon-facebook"></i></a></li>
+                  <li><a href="#"><i class="icon-github"></i></a></li>
+                  <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                  <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                  <li><a href="#"><i class="icon-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+           
+            <div class="col-md-4 probootstrap-animate">
+              <div class="probootstrap-footer-widget">
+                <h3>Contact Info</h3>
+                <ul class="probootstrap-contact-info">
+                  <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+                  <li><i class="icon-mail"></i><span>info@domain.com</span></li>
+                  <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+          <!-- END row -->
+          
+        </div>
+      </footer>
+        
+        
+    <script src="js/scripts.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/custom.js"></script>
+    </h:body>
+</html>
+

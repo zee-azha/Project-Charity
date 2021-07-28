@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:b="http://bootsfaces.net/ui"
+       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Causes</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="base_template.xhtml">
+            <ui:define name="topbody">
+               
+                <h1 class="probootstrap-heading probootstrap-animate">Causes <span>Together we can make a difference</span></h1>
+            </ui:define>
+            
+                
+            <ui:define name="body">
+                  <section class="probootstrap-section">
+        <div class="container">
+   
+             <h:form styleClass="form-signin" prependId="false" >
+                 <c:forEach items="${tblPost.getallrecords()}" var="s">
+                 <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate" data-animate-effect="fadeIn">
+              <div class="probootstrap-image-text-block probootstrap-cause">
+            
+                  <img src="img/img_sm_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"/>
+                
+                <div class="probootstrap-cause-inner">
+                 
+
+                 
+                  
+                    <h2><a href="#">${s.judul}</a></h2>
+                  
+                  <p>${s.deskirpsi}</p>
+                  
+                  <p><b:commandLink action="#{tblPost.lihat()}">
+                  <f:param id="param1" name="paramName" value="#{s.id}"/>
+                  Donate</b:commandLink></p>
+                  
+                </div>
+              
+              </div>                                  
+                 </div>
+                 </c:forEach>
+                   </h:form>         
+        </div>
+                  </section>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
